@@ -12,6 +12,7 @@ module Builders
 
       def build
         Jbuilder.new do |json|
+          json.errors []
           json.flow_chart do
             json.id flow_chart.id
             json.title flow_chart.title

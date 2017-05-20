@@ -1,7 +1,9 @@
+# frozen_string_literal: true
+
 # flow_charts_controller.rb
 class FlowChartsController < ApplicationController
   before_action :authenticate_user!
-  before_action :fetch_flow_chart, only: [:show, :update, :destroy]
+  before_action :fetch_flow_chart, only: %i[show update destroy]
 
   def index
     render json: Builders::Json::FlowCharts.new(current_user.flow_charts).build
@@ -45,6 +47,6 @@ class FlowChartsController < ApplicationController
 
   def fetch_flow_chart
     @flow_chart = current_user.flow_charts.find_by(id: params[:id])
-    render json: Builders::Json::NotFound.new('Flow chart').build unless @flow_chart
+    render json: Builders::Json::NotFound.new('Flow chart').build, status: 500 unless @flow_chart
   end
 end

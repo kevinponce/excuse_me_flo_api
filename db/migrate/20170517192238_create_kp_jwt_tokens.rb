@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# creates table kp_jwt_tokens
 class CreateKpJwtTokens < ActiveRecord::Migration[5.0]
   def change
     create_table :kp_jwt_tokens do |t|

@@ -13,4 +13,5 @@ class User < ActiveRecord::Base
             length: { maximum: 50 },
             format: { with: /[\w\-.+]@[a-z\d\-.]+\.[a-z]+/i },
             if: :email_changed?
+  validates :password, length: { minimum: 6 }
 end

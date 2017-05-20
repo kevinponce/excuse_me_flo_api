@@ -12,7 +12,7 @@ module Builders
 
       def build
         Jbuilder.new do |json|
-          json.errors "#{name} not found"
+          json.errors ["#{name} not found"]
         end.attributes!
       end
     end
