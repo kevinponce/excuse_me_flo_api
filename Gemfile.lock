@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: https://github.com/kevinponce/kp_jwt.git
-  revision: ea59cd97416eb90d213b11cde5cc771462df2ab7
+  revision: 9f065e6e0c241ed74cc8c8043e76657eed41f138
   specs:
     kp_jwt (0.1.0)
       bcrypt (~> 3.1)
